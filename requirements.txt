@@ -1,0 +1,10 @@
+django
+django-crispy-forms
+whitenoise
+requests
+python-dotenv
+azure-cognitiveservices-speech==1.18.0
+azure-cognitiveservices-vision-computervision
+msrest
+pillow
+nltk

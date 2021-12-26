@@ -1,0 +1,84 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container-fluid col-lg-8 mt-5 mb-5">
+  <div class="card text-center border-primary">
+    <div class="card-header">
+      Translation Service
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Translate the Languages</h5>
+      <p class="card-text">Supported Language : English, Hindi, French, German, Italian, Japanese, Russian, Spanish, Chinese, Arabic.</p>
+      <a href="{% url 'translate' %}" class="btn btn-primary">Click here</a>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+  </div>
+
+  <div class="card text-center mt-5 border-primary">
+    <div class="card-header">
+      Speech Services
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Speak the Language</h5>
+      <p class="card-text">Supported Language : English</p>
+      <a href="{% url 'speech' %}" class="btn btn-primary">Click here</a>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+  </div>
+
+  <div class="card text-center mt-5 border-primary">
+    <div class="card-header">
+      Text extraction Services
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Extract text from Image</h5>
+      <p class="card-text"></p>
+      <a href="{% url 'extract_image_text' %}" class="btn btn-primary">Click here</a>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+  </div>
+
+  <div class="card text-center mt-5 border-primary">
+    <div class="card-header">
+      Word classes Services
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Retrieve Parts of Speech </h5>
+      <p class="card-text">Supported Language : English</p>
+      <a href="{% url 'pos_tagging_url' %}" class="btn btn-primary">Click here</a>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+  </div>
+
+  <div class="card text-center mt-5 border-primary">
+    <div class="card-header">
+      Pronunciation Services
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Check your Pronunciation</h5>
+      <p class="card-text">Supported Language : English</p>
+      <a href="{% url 'pronunciation_page' %}" class="btn btn-primary">Click here</a>
+    </div>
+    <div class="card-footer text-muted">
+      
+    </div>
+  </div>
+
+    
+
+    
+  </div>
+</div>
+
+
+{% endblock %}

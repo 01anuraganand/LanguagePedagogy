@@ -1,0 +1,44 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block content %}
+{% block title %}
+        <title>Language Pedagogy : Generate Text</title>
+    {% endblock %}
+<body>
+    <div class="container">
+    <h1>Extract Text from Image</h1>
+     <div class="py-5 text-center bg-secondary text-white">
+      <h1 class="mb-3">Upload Image</h1>
+      <form action="" method="post" enctype="multipart/form-data">
+       {% csrf_token %}
+       {{form}}
+       <input type="submit" class="btn btn-danger" value="Generate Text">
+      </form>
+     </div>
+     <div class="row">
+      {% for x in img %}
+       <div class="col-sm-4">
+        <div class="card m-2">
+         <img src="{{x.photo.url}}" class="img-fluid" alt="Responsive image">
+         <div class="card-footer text-center" >
+             Uploaded Photo
+         </div>
+        </div>
+       </div>
+      {% endfor %}
+      <div class="col-sm-8">
+        
+        <div class="card">
+            
+            {% for page in text_line %}
+            <h3>Generated Text:</h3>
+            {% for line in page.lines %}
+            {{line.text}}
+            {% endfor %}
+            {% endfor %}
+            {% endblock %}
+         </div>
+        </div>
+       </div>
+     </div>
+    </div>    
